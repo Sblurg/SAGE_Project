@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ProjetModele/src" modelPluginID="ProjetModele"
+    modelName="ProjetModele" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>projetModele.ecore</foreignModel>
+  <genPackages prefix="ProjetModele" disposableProviderFactory="true" ecorePackage="projetModele.ecore#/">
+    <genClasses ecoreClass="projetModele.ecore#//OperateurEntrepot">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetModele.ecore#//OperateurEntrepot/name"/>
+      <genOperations ecoreOperation="projetModele.ecore#//OperateurEntrepot/OperateurEntrepot"/>
+      <genOperations ecoreOperation="projetModele.ecore#//OperateurEntrepot/OperateurEntrepot.1">
+        <genParameters ecoreParameter="projetModele.ecore#//OperateurEntrepot/OperateurEntrepot.1/name"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//Topographie">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetModele.ecore#//Topographie/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetModele.ecore#//Topographie/zones"/>
+      <genOperations ecoreOperation="projetModele.ecore#//Topographie/Topographie"/>
+      <genOperations ecoreOperation="projetModele.ecore#//Topographie/Topographie.1">
+        <genParameters ecoreParameter="projetModele.ecore#//Topographie/Topographie.1/name"/>
+        <genParameters ecoreParameter="projetModele.ecore#//Topographie/Topographie.1/zones"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//Zone">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetModele.ecore#//Zone/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetModele.ecore#//Zone/opeEntrepots"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetModele.ecore#//Zone/positions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetModele.ecore#//Zone/equipementStockages"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetModele.ecore#//Zone/zones"/>
+      <genOperations ecoreOperation="projetModele.ecore#//Zone/Zone"/>
+      <genOperations ecoreOperation="projetModele.ecore#//Zone/Zones">
+        <genParameters ecoreParameter="projetModele.ecore#//Zone/Zones/name"/>
+        <genParameters ecoreParameter="projetModele.ecore#//Zone/Zones/pos"/>
+        <genParameters ecoreParameter="projetModele.ecore#//Zone/Zones/equip"/>
+        <genParameters ecoreParameter="projetModele.ecore#//Zone/Zones/zones"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//Position">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetModele.ecore#//Position/longitude"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetModele.ecore#//Position/latitude"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetModele.ecore#//Position/altitude"/>
+      <genOperations ecoreOperation="projetModele.ecore#//Position/Position"/>
+      <genOperations ecoreOperation="projetModele.ecore#//Position/Position.1">
+        <genParameters ecoreParameter="projetModele.ecore#//Position/Position.1/long"/>
+        <genParameters ecoreParameter="projetModele.ecore#//Position/Position.1/lat"/>
+        <genParameters ecoreParameter="projetModele.ecore#//Position/Position.1/alt"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//Dimension">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetModele.ecore#//Dimension/hauteur"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetModele.ecore#//Dimension/largeur"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetModele.ecore#//Dimension/profondeur"/>
+      <genOperations ecoreOperation="projetModele.ecore#//Dimension/Dimension"/>
+      <genOperations ecoreOperation="projetModele.ecore#//Dimension/Dimension.1">
+        <genParameters ecoreParameter="projetModele.ecore#//Dimension/Dimension.1/haut"/>
+        <genParameters ecoreParameter="projetModele.ecore#//Dimension/Dimension.1/larg"/>
+        <genParameters ecoreParameter="projetModele.ecore#//Dimension/Dimension.1/prof"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//EquipementStockage">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetModele.ecore#//EquipementStockage/dimension"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetModele.ecore#//EquipementStockage/position"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetModele.ecore#//EquipementStockage/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetModele.ecore#//EquipementStockage/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetModele.ecore#//EquipementStockage/occupe"/>
+      <genOperations ecoreOperation="projetModele.ecore#//EquipementStockage/EquipementStockage"/>
+      <genOperations ecoreOperation="projetModele.ecore#//EquipementStockage/EquipementStockage.1">
+        <genParameters ecoreParameter="projetModele.ecore#//EquipementStockage/EquipementStockage.1/name"/>
+        <genParameters ecoreParameter="projetModele.ecore#//EquipementStockage/EquipementStockage.1/dim"/>
+        <genParameters ecoreParameter="projetModele.ecore#//EquipementStockage/EquipementStockage.1/pos"/>
+        <genParameters ecoreParameter="projetModele.ecore#//EquipementStockage/EquipementStockage.1/type"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//TypeEquipement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetModele.ecore#//TypeEquipement/name"/>
+      <genOperations ecoreOperation="projetModele.ecore#//TypeEquipement/TypeEquipement"/>
+      <genOperations ecoreOperation="projetModele.ecore#//TypeEquipement/TypeEquipement.1">
+        <genParameters ecoreParameter="projetModele.ecore#//TypeEquipement/TypeEquipement.1/name"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//TypeSimple"/>
+    <genClasses ecoreClass="projetModele.ecore#//TypeZoneSeche">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetModele.ecore#//TypeZoneSeche/contrainteHumidite"/>
+      <genOperations ecoreOperation="projetModele.ecore#//TypeZoneSeche/TypeZoneSeche"/>
+      <genOperations ecoreOperation="projetModele.ecore#//TypeZoneSeche/TypeZoneSeche.1">
+        <genParameters ecoreParameter="projetModele.ecore#//TypeZoneSeche/TypeZoneSeche.1/contr"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//ContrainteHumidite">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetModele.ecore#//ContrainteHumidite/limiteHumidite"/>
+      <genOperations ecoreOperation="projetModele.ecore#//ContrainteHumidite/ContrainteHumidite"/>
+      <genOperations ecoreOperation="projetModele.ecore#//ContrainteHumidite/ContrainteHumidite.1">
+        <genParameters ecoreParameter="projetModele.ecore#//ContrainteHumidite/ContrainteHumidite.1/lim"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//TypeFrigorifique">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetModele.ecore#//TypeFrigorifique/contrainteTemperature"/>
+      <genOperations ecoreOperation="projetModele.ecore#//TypeFrigorifique/TypeFrigorifique"/>
+      <genOperations ecoreOperation="projetModele.ecore#//TypeFrigorifique/TypeFrigorifique.1">
+        <genParameters ecoreParameter="projetModele.ecore#//TypeFrigorifique/TypeFrigorifique.1/contr"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//ContrainteTemperature">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetModele.ecore#//ContrainteTemperature/limiteTemperature"/>
+      <genOperations ecoreOperation="projetModele.ecore#//ContrainteTemperature/ContrainteTemperature"/>
+      <genOperations ecoreOperation="projetModele.ecore#//ContrainteTemperature/ContrainteTemperature.1">
+        <genParameters ecoreParameter="projetModele.ecore#//ContrainteTemperature/ContrainteTemperature.1/lim"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//ContrainteDimension">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetModele.ecore#//ContrainteDimension/dimension"/>
+      <genOperations ecoreOperation="projetModele.ecore#//ContrainteDimension/ContrainteDimension"/>
+      <genOperations ecoreOperation="projetModele.ecore#//ContrainteDimension/ContrainteDimension.1">
+        <genParameters ecoreParameter="projetModele.ecore#//ContrainteDimension/ContrainteDimension.1/dim"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//Produit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetModele.ecore#//Produit/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetModele.ecore#//Produit/dateLimiteConso"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetModele.ecore#//Produit/dimension"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetModele.ecore#//Produit/position"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetModele.ecore#//Produit/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetModele.ecore#//Produit/contrainteStockage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetModele.ecore#//Produit/modeleCout"/>
+      <genOperations ecoreOperation="projetModele.ecore#//Produit/Produit"/>
+      <genOperations ecoreOperation="projetModele.ecore#//Produit/Produit.1">
+        <genParameters ecoreParameter="projetModele.ecore#//Produit/Produit.1/name"/>
+        <genParameters ecoreParameter="projetModele.ecore#//Produit/Produit.1/coutStock"/>
+        <genParameters ecoreParameter="projetModele.ecore#//Produit/Produit.1/coutDestock"/>
+        <genParameters ecoreParameter="projetModele.ecore#//Produit/Produit.1/dateLim"/>
+        <genParameters ecoreParameter="projetModele.ecore#//Produit/Produit.1/type"/>
+        <genParameters ecoreParameter="projetModele.ecore#//Produit/Produit.1/pos"/>
+        <genParameters ecoreParameter="projetModele.ecore#//Produit/Produit.1/dim"/>
+        <genParameters ecoreParameter="projetModele.ecore#//Produit/Produit.1/contrainte"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//TypeProduit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetModele.ecore#//TypeProduit/name"/>
+      <genOperations ecoreOperation="projetModele.ecore#//TypeProduit/TypeProduit"/>
+      <genOperations ecoreOperation="projetModele.ecore#//TypeProduit/TypeProduit.1">
+        <genParameters ecoreParameter="projetModele.ecore#//TypeProduit/TypeProduit.1/name"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//ContrainteStockage"/>
+    <genClasses ecoreClass="projetModele.ecore#//LimiteTemperature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetModele.ecore#//LimiteTemperature/temperatureMin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetModele.ecore#//LimiteTemperature/temperatureMax"/>
+      <genOperations ecoreOperation="projetModele.ecore#//LimiteTemperature/LimiteTemperature"/>
+      <genOperations ecoreOperation="projetModele.ecore#//LimiteTemperature/LimiteTemperature.1">
+        <genParameters ecoreParameter="projetModele.ecore#//LimiteTemperature/LimiteTemperature.1/tempMin"/>
+        <genParameters ecoreParameter="projetModele.ecore#//LimiteTemperature/LimiteTemperature.1/tempMax"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//LimiteHumidite">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetModele.ecore#//LimiteHumidite/humiMin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetModele.ecore#//LimiteHumidite/humiMax"/>
+      <genOperations ecoreOperation="projetModele.ecore#//LimiteHumidite/LimiteHumidite"/>
+      <genOperations ecoreOperation="projetModele.ecore#//LimiteHumidite/LimiteHumidite.1">
+        <genParameters ecoreParameter="projetModele.ecore#//LimiteHumidite/LimiteHumidite.1/humiMin"/>
+        <genParameters ecoreParameter="projetModele.ecore#//LimiteHumidite/LimiteHumidite.1/humiMax"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//ModeleCoutProduit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetModele.ecore#//ModeleCoutProduit/coutStock"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetModele.ecore#//ModeleCoutProduit/coutDeStock"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetModele.ecore#//ModeleCoutProduit/coutDeplacement"/>
+      <genOperations ecoreOperation="projetModele.ecore#//ModeleCoutProduit/ModeleCoutProduit"/>
+      <genOperations ecoreOperation="projetModele.ecore#//ModeleCoutProduit/ModeleCoutProduit.1">
+        <genParameters ecoreParameter="projetModele.ecore#//ModeleCoutProduit/ModeleCoutProduit.1/coutStock"/>
+        <genParameters ecoreParameter="projetModele.ecore#//ModeleCoutProduit/ModeleCoutProduit.1/coutDestock"/>
+        <genParameters ecoreParameter="projetModele.ecore#//ModeleCoutProduit/ModeleCoutProduit.1/coutDepla"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//ModeleEconomiqueProduit">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetModele.ecore#//ModeleEconomiqueProduit/modeleCoutProduit"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetModele.ecore#//ModeleEconomiqueProduit/produit"/>
+      <genOperations ecoreOperation="projetModele.ecore#//ModeleEconomiqueProduit/ModeleEconomiqueProduit"/>
+      <genOperations ecoreOperation="projetModele.ecore#//ModeleEconomiqueProduit/ModeleEconomiqueProduit.1">
+        <genParameters ecoreParameter="projetModele.ecore#//ModeleEconomiqueProduit/ModeleEconomiqueProduit.1/modCout"/>
+        <genParameters ecoreParameter="projetModele.ecore#//ModeleEconomiqueProduit/ModeleEconomiqueProduit.1/produit"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//OperateurEntreprotDAO">
+      <genOperations ecoreOperation="projetModele.ecore#//OperateurEntreprotDAO/OperateurEntrepotDAO"/>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//ContrainteHumiditeDAO">
+      <genOperations ecoreOperation="projetModele.ecore#//ContrainteHumiditeDAO/ContrainteHumiditeDAO"/>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//LimiteHumiditeDAO">
+      <genOperations ecoreOperation="projetModele.ecore#//LimiteHumiditeDAO/LimiteHumiditeDAO"/>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//ModeleEconomiqueProduitDAO">
+      <genOperations ecoreOperation="projetModele.ecore#//ModeleEconomiqueProduitDAO/ModeleEconomiqueProduit"/>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//LimiteTemperatureDAO">
+      <genOperations ecoreOperation="projetModele.ecore#//LimiteTemperatureDAO/LimiteTemperatureDAO"/>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//ContrainteStockageDAO">
+      <genOperations ecoreOperation="projetModele.ecore#//ContrainteStockageDAO/ContrainteStockageDAO"/>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//TypeProduitDAO">
+      <genOperations ecoreOperation="projetModele.ecore#//TypeProduitDAO/TypeProduitDAO"/>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//ProduitDAO">
+      <genOperations ecoreOperation="projetModele.ecore#//ProduitDAO/ProduitDAO"/>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//ContrainteTemperatureDAO">
+      <genOperations ecoreOperation="projetModele.ecore#//ContrainteTemperatureDAO/ContrainteTemperatureDAO"/>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//ModeleCoutProduitDAO">
+      <genOperations ecoreOperation="projetModele.ecore#//ModeleCoutProduitDAO/ModeleCoutProduit"/>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//PositionDAO">
+      <genOperations ecoreOperation="projetModele.ecore#//PositionDAO/PositionDAO"/>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//ZoneDAO">
+      <genOperations ecoreOperation="projetModele.ecore#//ZoneDAO/ZoneDAO"/>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//TopographieDAO">
+      <genOperations ecoreOperation="projetModele.ecore#//TopographieDAO/TopographieDAO"/>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//EquipementStockageDAO">
+      <genOperations ecoreOperation="projetModele.ecore#//EquipementStockageDAO/EquipementStockageDAO"/>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//DimensionDAO">
+      <genOperations ecoreOperation="projetModele.ecore#//DimensionDAO/DimensionDAO"/>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//TypeEquipementDAO">
+      <genOperations ecoreOperation="projetModele.ecore#//TypeEquipementDAO/TypeEquipementDAO"/>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//TypeSimpleDAO">
+      <genOperations ecoreOperation="projetModele.ecore#//TypeSimpleDAO/TypeSimpleDAO"/>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//TypeZoneSecheDAO">
+      <genOperations ecoreOperation="projetModele.ecore#//TypeZoneSecheDAO/TypeZoneSecheDAO"/>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//TypeFrigorifiqueDAO">
+      <genOperations ecoreOperation="projetModele.ecore#//TypeFrigorifiqueDAO/TypeFrigorifiqueDAO"/>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//ContrainteDimensionDAO">
+      <genOperations ecoreOperation="projetModele.ecore#//ContrainteDimensionDAO/ContrainteDimensinDAO"/>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//AbstractDAO">
+      <genOperations ecoreOperation="projetModele.ecore#//AbstractDAO/create"/>
+      <genOperations ecoreOperation="projetModele.ecore#//AbstractDAO/delete"/>
+      <genOperations ecoreOperation="projetModele.ecore#//AbstractDAO/save"/>
+      <genOperations ecoreOperation="projetModele.ecore#//AbstractDAO/find"/>
+    </genClasses>
+    <genClasses ecoreClass="projetModele.ecore#//Controleur">
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/ControleurDAO"/>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/addOperateurEntrepot">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/addOperateurEntrepot/o"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/removeOperateurEntrepot">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/removeOperateurEntrepot/o"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/updateOperateurEntrepot">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/updateOperateurEntrepot/o"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/getAllOperateurEntrepot"/>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/addZone">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/addZone/z"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/removeZone">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/removeZone/z"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/updateZone">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/updateZone/z"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/getAllZone"/>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/addTopographie">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/addTopographie/t"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/removeTopographique">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/removeTopographique/t"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/updateTopographie">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/updateTopographie/t"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/getAllTopograpie"/>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/addEquipementStockage">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/addEquipementStockage/e"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/removeEquipementStockage">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/removeEquipementStockage/e"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/updateEquipementStockage">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/updateEquipementStockage/e"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/getAllEquipementStockages"/>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/addDimension">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/addDimension/d"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/removeDimension">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/removeDimension/d"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/updateDimension">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/updateDimension/d"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/getAllDimension"/>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/addTypeEquipement">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/addTypeEquipement/t"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/removeTypeEquipement">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/removeTypeEquipement/t"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/updateTypeEquipement">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/updateTypeEquipement/t"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/getAllTypeEquipement"/>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/addTypeSimple">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/addTypeSimple/t"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/removeTypeSimple">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/removeTypeSimple/t"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/updateTypeSimple">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/updateTypeSimple/t"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/getAllTypeSimple"/>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/addTypeZoneSeche">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/addTypeZoneSeche/t"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/removeTypeZoneSeche">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/removeTypeZoneSeche/t"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/updateTypeZoneSeche">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/updateTypeZoneSeche/t"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/getAllTypeZoneSeche"/>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/addTypeFrigorifique">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/addTypeFrigorifique/t"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/removeTypeFrigorifique">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/removeTypeFrigorifique/t"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/updateTypeFrigorifique">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/updateTypeFrigorifique/t"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/getAllTypeFrigorifique"/>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/addContrainteDimension">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/addContrainteDimension/c"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/removeContrainteDimension">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/removeContrainteDimension/c"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/updateContrainteDimension">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/updateContrainteDimension/c"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/getAllContrainteDimension"/>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/addPosition">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/addPosition/p"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/removePosition">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/removePosition/p"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/updatePosition">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/updatePosition/p"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/getAllPosition"/>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/addModeleCoutProduit">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/addModeleCoutProduit/m"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/removeModeleCoutProduit">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/removeModeleCoutProduit/m"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/updateModeleCoutProduit">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/updateModeleCoutProduit/m"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/getAllModeleCoutProduit"/>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/addModeleEconomiqueProduit">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/addModeleEconomiqueProduit/m"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/removeModeleEconomiqueProduit">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/removeModeleEconomiqueProduit/m"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/updateModeleEconomiqueProduit">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/updateModeleEconomiqueProduit/m"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/getAllModeleEconomiqueProduit"/>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/addLimiteHumidite">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/addLimiteHumidite/l"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/removeLimiteHumidite">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/removeLimiteHumidite/l"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/updateLimiteHumidite">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/updateLimiteHumidite/l"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/getAllLimiteHumidite"/>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/addContrainteHumidite">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/addContrainteHumidite/c"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/removeContrainteHumidite">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/removeContrainteHumidite/c"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/updateContrainteHumidite">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/updateContrainteHumidite/c"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/getAllContrainteHumidite"/>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/addLimiteTemperature">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/addLimiteTemperature/l"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/removeLimiteTemperature">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/removeLimiteTemperature/l"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/updateLimiteTemperature">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/updateLimiteTemperature/l"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/getAllLimiteTemperature"/>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/addContrainteStockage">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/addContrainteStockage/c"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/removeContrainteStockage">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/removeContrainteStockage/c"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/updateContrainteStockage">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/updateContrainteStockage/c"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/getAllContrainteStockage"/>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/addTypeProduit">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/addTypeProduit/t"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/removeTypeProduit">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/removeTypeProduit/t"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/updateTypeProduit">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/updateTypeProduit/t"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/getAllTypeProduit"/>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/addProduit">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/addProduit/p"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/removeProduit">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/removeProduit/p"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/updateProduit">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/updateProduit/p"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/getAllProduit"/>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/addContrainteTemperature">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/addContrainteTemperature/c"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/removeContrainteTemperature">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/removeContrainteTemperature/c"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/updateContrainteTemperature">
+        <genParameters ecoreParameter="projetModele.ecore#//Controleur/updateContrainteTemperature/c"/>
+      </genOperations>
+      <genOperations ecoreOperation="projetModele.ecore#//Controleur/getAllContrainteTemperature"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

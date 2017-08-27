@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="projetModele" nsURI="http://www.example.org/projetModele" nsPrefix="projetModele">
+  <eClassifiers xsi:type="ecore:EClass" name="OperateurEntrepot">
+    <eOperations name="OperateurEntrepot" eType="#//OperateurEntrepot"/>
+    <eOperations name="OperateurEntrepot" eType="#//OperateurEntrepot">
+      <eParameters name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Topographie">
+    <eOperations name="Topographie" eType="#//Topographie"/>
+    <eOperations name="Topographie" eType="#//Topographie">
+      <eParameters name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="zones" upperBound="-1" eType="#//Zone"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="zones" upperBound="-1"
+        eType="#//Zone"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Zone">
+    <eOperations name="Zone" eType="#//Zone"/>
+    <eOperations name="Zones" eType="#//Zone">
+      <eParameters name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="pos" upperBound="-1" eType="#//Position"/>
+      <eParameters name="equip" upperBound="-1" eType="#//EquipementStockage"/>
+      <eParameters name="zones" upperBound="-1" eType="#//Zone"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="opeEntrepots" upperBound="-1"
+        eType="#//OperateurEntrepot"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="positions" upperBound="-1"
+        eType="#//Position"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="equipementStockages" upperBound="-1"
+        eType="#//EquipementStockage"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="zones" upperBound="-1"
+        eType="#//Zone"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Position">
+    <eOperations name="Position" eType="#//Position"/>
+    <eOperations name="Position" eType="#//Position">
+      <eParameters name="long" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      <eParameters name="lat" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      <eParameters name="alt" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="longitude" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="latitude" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="altitude" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Dimension">
+    <eOperations name="Dimension" eType="#//Dimension"/>
+    <eOperations name="Dimension" eType="#//Dimension">
+      <eParameters name="haut" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      <eParameters name="larg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      <eParameters name="prof" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hauteur" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="largeur" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="profondeur" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EquipementStockage">
+    <eOperations name="EquipementStockage" eType="#//EquipementStockage"/>
+    <eOperations name="EquipementStockage" eType="#//EquipementStockage">
+      <eParameters name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="dim" eType="#//Dimension"/>
+      <eParameters name="pos" eType="#//Position"/>
+      <eParameters name="type" eType="#//TypeEquipement"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dimension" lowerBound="1"
+        eType="#//Dimension"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="position" lowerBound="1"
+        eType="#//Position"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//TypeEquipement"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="occupe" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TypeEquipement">
+    <eOperations name="TypeEquipement" eType="#//TypeEquipement"/>
+    <eOperations name="TypeEquipement" eType="#//TypeEquipement">
+      <eParameters name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TypeSimple" eSuperTypes="#//TypeEquipement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TypeZoneSeche" eSuperTypes="#//TypeEquipement">
+    <eOperations name="TypeZoneSeche" eType="#//TypeZoneSeche"/>
+    <eOperations name="TypeZoneSeche" eType="#//TypeZoneSeche">
+      <eParameters name="contr" eType="#//ContrainteHumidite"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contrainteHumidite" lowerBound="1"
+        eType="#//ContrainteHumidite"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContrainteHumidite" eSuperTypes="#//ContrainteStockage">
+    <eOperations name="ContrainteHumidite" eType="#//ContrainteHumidite"/>
+    <eOperations name="ContrainteHumidite" eType="#//ContrainteHumidite">
+      <eParameters name="lim" eType="#//LimiteHumidite"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="limiteHumidite" lowerBound="1"
+        eType="#//LimiteHumidite"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TypeFrigorifique" eSuperTypes="#//TypeEquipement">
+    <eOperations name="TypeFrigorifique" eType="#//TypeFrigorifique"/>
+    <eOperations name="TypeFrigorifique" eType="#//TypeFrigorifique">
+      <eParameters name="contr" eType="#//ContrainteTemperature"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contrainteTemperature"
+        lowerBound="1" eType="#//ContrainteTemperature"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContrainteTemperature" eSuperTypes="#//ContrainteStockage">
+    <eOperations name="ContrainteTemperature" eType="#//ContrainteTemperature"/>
+    <eOperations name="ContrainteTemperature" eType="#//ContrainteTemperature">
+      <eParameters name="lim" eType="#//LimiteTemperature"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="limiteTemperature" lowerBound="1"
+        eType="#//LimiteTemperature"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContrainteDimension" eSuperTypes="#//ContrainteStockage">
+    <eOperations name="ContrainteDimension" eType="#//ContrainteDimension"/>
+    <eOperations name="ContrainteDimension" eType="#//ContrainteDimension">
+      <eParameters name="dim" eType="#//Dimension"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dimension" lowerBound="1"
+        eType="#//Dimension"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Produit">
+    <eOperations name="Produit" eType="#//Produit"/>
+    <eOperations name="Produit" eType="#//Produit">
+      <eParameters name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="coutStock" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      <eParameters name="coutDestock" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      <eParameters name="dateLim" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      <eParameters name="type" eType="#//TypeProduit"/>
+      <eParameters name="pos" eType="#//Position"/>
+      <eParameters name="dim" eType="#//Dimension"/>
+      <eParameters name="contrainte" eType="#//ContrainteStockage"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dateLimiteConso" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dimension" lowerBound="1"
+        eType="#//Dimension"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="position" lowerBound="1"
+        eType="#//Position"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//TypeProduit"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contrainteStockage" upperBound="-1"
+        eType="#//ContrainteStockage"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modeleCout" lowerBound="1"
+        eType="#//ModeleCoutProduit"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TypeProduit">
+    <eOperations name="TypeProduit" eType="#//TypeProduit"/>
+    <eOperations name="TypeProduit" eType="#//TypeProduit">
+      <eParameters name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContrainteStockage"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LimiteTemperature">
+    <eOperations name="LimiteTemperature" eType="#//LimiteTemperature"/>
+    <eOperations name="LimiteTemperature" eType="#//LimiteTemperature">
+      <eParameters name="tempMin" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      <eParameters name="tempMax" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="temperatureMin" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="temperatureMax" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LimiteHumidite">
+    <eOperations name="LimiteHumidite" eType="#//LimiteHumidite"/>
+    <eOperations name="LimiteHumidite" eType="#//LimiteHumidite">
+      <eParameters name="humiMin" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      <eParameters name="humiMax" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="humiMin" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="humiMax" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModeleCoutProduit">
+    <eOperations name="ModeleCoutProduit" eType="#//ModeleCoutProduit"/>
+    <eOperations name="ModeleCoutProduit" eType="#//ModeleCoutProduit">
+      <eParameters name="coutStock" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      <eParameters name="coutDestock" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      <eParameters name="coutDepla" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="coutStock" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="coutDeStock" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="coutDeplacement" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModeleEconomiqueProduit">
+    <eOperations name="ModeleEconomiqueProduit" eType="#//ModeleEconomiqueProduit"/>
+    <eOperations name="ModeleEconomiqueProduit" eType="#//ModeleEconomiqueProduit">
+      <eParameters name="modCout" eType="#//ModeleCoutProduit"/>
+      <eParameters name="produit" eType="#//Produit"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modeleCoutProduit" lowerBound="1"
+        eType="#//ModeleCoutProduit"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="produit" lowerBound="1"
+        eType="#//Produit"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OperateurEntreprotDAO" eSuperTypes="#//AbstractDAO">
+    <eOperations name="OperateurEntrepotDAO"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContrainteHumiditeDAO" eSuperTypes="#//AbstractDAO">
+    <eOperations name="ContrainteHumiditeDAO" eType="#//ContrainteHumiditeDAO"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LimiteHumiditeDAO" eSuperTypes="#//AbstractDAO">
+    <eOperations name="LimiteHumiditeDAO" eType="#//LimiteHumiditeDAO"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModeleEconomiqueProduitDAO" eSuperTypes="#//AbstractDAO">
+    <eOperations name="ModeleEconomiqueProduit" eType="#//ModeleEconomiqueProduit"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LimiteTemperatureDAO" eSuperTypes="#//AbstractDAO">
+    <eOperations name="LimiteTemperatureDAO" eType="#//LimiteTemperatureDAO"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContrainteStockageDAO" eSuperTypes="#//AbstractDAO">
+    <eOperations name="ContrainteStockageDAO" eType="#//ContrainteStockageDAO"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TypeProduitDAO" eSuperTypes="#//AbstractDAO">
+    <eOperations name="TypeProduitDAO" eType="#//TypeProduitDAO"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProduitDAO" eSuperTypes="#//AbstractDAO">
+    <eOperations name="ProduitDAO" eType="#//ProduitDAO"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContrainteTemperatureDAO" eSuperTypes="#//AbstractDAO">
+    <eOperations name="ContrainteTemperatureDAO"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModeleCoutProduitDAO" eSuperTypes="#//AbstractDAO">
+    <eOperations name="ModeleCoutProduit" eType="#//ModeleCoutProduit"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PositionDAO" eSuperTypes="#//AbstractDAO">
+    <eOperations name="PositionDAO" eType="#//PositionDAO"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ZoneDAO" eSuperTypes="#//AbstractDAO">
+    <eOperations name="ZoneDAO" eType="#//ZoneDAO"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TopographieDAO" eSuperTypes="#//AbstractDAO">
+    <eOperations name="TopographieDAO" eType="#//TopographieDAO"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EquipementStockageDAO" eSuperTypes="#//AbstractDAO">
+    <eOperations name="EquipementStockageDAO" eType="#//EquipementStockageDAO"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DimensionDAO" eSuperTypes="#//AbstractDAO">
+    <eOperations name="DimensionDAO" eType="#//DimensionDAO"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TypeEquipementDAO" eSuperTypes="#//AbstractDAO">
+    <eOperations name="TypeEquipementDAO" eType="#//TypeEquipementDAO"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TypeSimpleDAO" eSuperTypes="#//AbstractDAO">
+    <eOperations name="TypeSimpleDAO" eType="#//TypeSimpleDAO"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TypeZoneSecheDAO" eSuperTypes="#//AbstractDAO">
+    <eOperations name="TypeZoneSecheDAO" eType="#//TypeZoneSecheDAO"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TypeFrigorifiqueDAO" eSuperTypes="#//AbstractDAO">
+    <eOperations name="TypeFrigorifiqueDAO" eType="#//TypeFrigorifiqueDAO"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContrainteDimensionDAO" eSuperTypes="#//AbstractDAO">
+    <eOperations name="ContrainteDimensinDAO" eType="#//ContrainteDimensionDAO"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractDAO">
+    <eOperations name="create"/>
+    <eOperations name="delete"/>
+    <eOperations name="save"/>
+    <eOperations name="find"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Controleur">
+    <eOperations name="ControleurDAO"/>
+    <eOperations name="addOperateurEntrepot" eType="#//OperateurEntrepot">
+      <eParameters name="o" eType="#//OperateurEntrepot"/>
+    </eOperations>
+    <eOperations name="removeOperateurEntrepot" eType="#//OperateurEntrepot">
+      <eParameters name="o" eType="#//OperateurEntrepot"/>
+    </eOperations>
+    <eOperations name="updateOperateurEntrepot" eType="#//OperateurEntrepot">
+      <eParameters name="o" eType="#//OperateurEntrepot"/>
+    </eOperations>
+    <eOperations name="getAllOperateurEntrepot" upperBound="-1" eType="#//OperateurEntrepot"/>
+    <eOperations name="addZone" eType="#//Zone">
+      <eParameters name="z" eType="#//Zone"/>
+    </eOperations>
+    <eOperations name="removeZone" eType="#//Zone">
+      <eParameters name="z" eType="#//Zone"/>
+    </eOperations>
+    <eOperations name="updateZone" eType="#//Zone">
+      <eParameters name="z" eType="#//Zone"/>
+    </eOperations>
+    <eOperations name="getAllZone" upperBound="-1" eType="#//Zone"/>
+    <eOperations name="addTopographie" eType="#//Topographie">
+      <eParameters name="t" eType="#//Topographie"/>
+    </eOperations>
+    <eOperations name="removeTopographique" eType="#//Topographie">
+      <eParameters name="t" eType="#//Topographie"/>
+    </eOperations>
+    <eOperations name="updateTopographie" eType="#//Topographie">
+      <eParameters name="t" eType="#//Topographie"/>
+    </eOperations>
+    <eOperations name="getAllTopograpie" upperBound="-1" eType="#//Topographie"/>
+    <eOperations name="addEquipementStockage" eType="#//EquipementStockage">
+      <eParameters name="e" eType="#//EquipementStockage"/>
+    </eOperations>
+    <eOperations name="removeEquipementStockage" eType="#//EquipementStockage">
+      <eParameters name="e" eType="#//EquipementStockage"/>
+    </eOperations>
+    <eOperations name="updateEquipementStockage" eType="#//EquipementStockage">
+      <eParameters name="e" eType="#//EquipementStockage"/>
+    </eOperations>
+    <eOperations name="getAllEquipementStockages" upperBound="-1" eType="#//EquipementStockage"/>
+    <eOperations name="addDimension" eType="#//Dimension">
+      <eParameters name="d" eType="#//Dimension"/>
+    </eOperations>
+    <eOperations name="removeDimension" eType="#//Dimension">
+      <eParameters name="d" eType="#//Dimension"/>
+    </eOperations>
+    <eOperations name="updateDimension" eType="#//Dimension">
+      <eParameters name="d" eType="#//Dimension"/>
+    </eOperations>
+    <eOperations name="getAllDimension" upperBound="-1" eType="#//Dimension"/>
+    <eOperations name="addTypeEquipement" eType="#//TypeEquipement">
+      <eParameters name="t" eType="#//TypeEquipement"/>
+    </eOperations>
+    <eOperations name="removeTypeEquipement" eType="#//TypeEquipement">
+      <eParameters name="t" eType="#//TypeEquipement"/>
+    </eOperations>
+    <eOperations name="updateTypeEquipement" eType="#//TypeEquipement">
+      <eParameters name="t" eType="#//TypeEquipement"/>
+    </eOperations>
+    <eOperations name="getAllTypeEquipement" upperBound="-1" eType="#//TypeEquipement"/>
+    <eOperations name="addTypeSimple" eType="#//TypeSimple">
+      <eParameters name="t" eType="#//TypeSimple"/>
+    </eOperations>
+    <eOperations name="removeTypeSimple" eType="#//TypeSimple">
+      <eParameters name="t" eType="#//TypeSimple"/>
+    </eOperations>
+    <eOperations name="updateTypeSimple" eType="#//TypeSimple">
+      <eParameters name="t" eType="#//TypeSimple"/>
+    </eOperations>
+    <eOperations name="getAllTypeSimple" upperBound="-1" eType="#//TypeSimple"/>
+    <eOperations name="addTypeZoneSeche" eType="#//TypeZoneSeche">
+      <eParameters name="t" eType="#//TypeZoneSeche"/>
+    </eOperations>
+    <eOperations name="removeTypeZoneSeche" eType="#//TypeZoneSeche">
+      <eParameters name="t" eType="#//TypeZoneSeche"/>
+    </eOperations>
+    <eOperations name="updateTypeZoneSeche" eType="#//TypeZoneSeche">
+      <eParameters name="t" eType="#//TypeZoneSeche"/>
+    </eOperations>
+    <eOperations name="getAllTypeZoneSeche" upperBound="-1" eType="#//TypeZoneSeche"/>
+    <eOperations name="addTypeFrigorifique" eType="#//TypeFrigorifique">
+      <eParameters name="t" eType="#//TypeFrigorifique"/>
+    </eOperations>
+    <eOperations name="removeTypeFrigorifique" eType="#//TypeFrigorifique">
+      <eParameters name="t" eType="#//TypeFrigorifique"/>
+    </eOperations>
+    <eOperations name="updateTypeFrigorifique" eType="#//TypeFrigorifique">
+      <eParameters name="t" eType="#//TypeFrigorifique"/>
+    </eOperations>
+    <eOperations name="getAllTypeFrigorifique" upperBound="-1" eType="#//TypeFrigorifique"/>
+    <eOperations name="addContrainteDimension" eType="#//ContrainteDimension">
+      <eParameters name="c" eType="#//ContrainteDimension"/>
+    </eOperations>
+    <eOperations name="removeContrainteDimension" eType="#//ContrainteDimension">
+      <eParameters name="c" eType="#//ContrainteDimension"/>
+    </eOperations>
+    <eOperations name="updateContrainteDimension" eType="#//ContrainteDimension">
+      <eParameters name="c" eType="#//ContrainteDimension"/>
+    </eOperations>
+    <eOperations name="getAllContrainteDimension" upperBound="-1" eType="#//ContrainteDimension"/>
+    <eOperations name="addPosition" eType="#//Position">
+      <eParameters name="p" eType="#//Position"/>
+    </eOperations>
+    <eOperations name="removePosition" eType="#//Position">
+      <eParameters name="p" eType="#//Position"/>
+    </eOperations>
+    <eOperations name="updatePosition" eType="#//Position">
+      <eParameters name="p" eType="#//Position"/>
+    </eOperations>
+    <eOperations name="getAllPosition" upperBound="-1" eType="#//Position"/>
+    <eOperations name="addModeleCoutProduit" eType="#//ModeleCoutProduit">
+      <eParameters name="m" eType="#//ModeleCoutProduit"/>
+    </eOperations>
+    <eOperations name="removeModeleCoutProduit" eType="#//ModeleCoutProduit">
+      <eParameters name="m" eType="#//ModeleCoutProduit"/>
+    </eOperations>
+    <eOperations name="updateModeleCoutProduit" eType="#//ModeleCoutProduit">
+      <eParameters name="m" eType="#//ModeleCoutProduit"/>
+    </eOperations>
+    <eOperations name="getAllModeleCoutProduit" upperBound="-1" eType="#//ModeleCoutProduit"/>
+    <eOperations name="addModeleEconomiqueProduit" eType="#//ModeleEconomiqueProduit">
+      <eParameters name="m" eType="#//ModeleEconomiqueProduit"/>
+    </eOperations>
+    <eOperations name="removeModeleEconomiqueProduit" eType="#//ModeleEconomiqueProduit">
+      <eParameters name="m" eType="#//ModeleEconomiqueProduit"/>
+    </eOperations>
+    <eOperations name="updateModeleEconomiqueProduit" eType="#//ModeleEconomiqueProduit">
+      <eParameters name="m" eType="#//ModeleEconomiqueProduit"/>
+    </eOperations>
+    <eOperations name="getAllModeleEconomiqueProduit" upperBound="-1" eType="#//ModeleEconomiqueProduit"/>
+    <eOperations name="addLimiteHumidite" eType="#//LimiteHumidite">
+      <eParameters name="l" eType="#//LimiteHumidite"/>
+    </eOperations>
+    <eOperations name="removeLimiteHumidite" eType="#//LimiteHumidite">
+      <eParameters name="l" eType="#//LimiteHumidite"/>
+    </eOperations>
+    <eOperations name="updateLimiteHumidite" eType="#//LimiteHumidite">
+      <eParameters name="l" eType="#//LimiteHumidite"/>
+    </eOperations>
+    <eOperations name="getAllLimiteHumidite" upperBound="-1" eType="#//LimiteHumidite"/>
+    <eOperations name="addContrainteHumidite" eType="#//ContrainteHumidite">
+      <eParameters name="c" eType="#//ContrainteHumidite"/>
+    </eOperations>
+    <eOperations name="removeContrainteHumidite" eType="#//ContrainteHumidite">
+      <eParameters name="c" eType="#//ContrainteHumidite"/>
+    </eOperations>
+    <eOperations name="updateContrainteHumidite" eType="#//ContrainteHumidite">
+      <eParameters name="c" eType="#//ContrainteHumidite"/>
+    </eOperations>
+    <eOperations name="getAllContrainteHumidite" upperBound="-1" eType="#//ContrainteHumidite"/>
+    <eOperations name="addLimiteTemperature" eType="#//LimiteTemperature">
+      <eParameters name="l" eType="#//LimiteTemperature"/>
+    </eOperations>
+    <eOperations name="removeLimiteTemperature" eType="#//LimiteTemperature">
+      <eParameters name="l" eType="#//LimiteTemperature"/>
+    </eOperations>
+    <eOperations name="updateLimiteTemperature" eType="#//LimiteTemperature">
+      <eParameters name="l" eType="#//LimiteTemperature"/>
+    </eOperations>
+    <eOperations name="getAllLimiteTemperature" upperBound="-1" eType="#//LimiteTemperature"/>
+    <eOperations name="addContrainteStockage" eType="#//ContrainteStockage">
+      <eParameters name="c" eType="#//ContrainteStockage"/>
+    </eOperations>
+    <eOperations name="removeContrainteStockage" eType="#//ContrainteStockage">
+      <eParameters name="c" eType="#//ContrainteStockage"/>
+    </eOperations>
+    <eOperations name="updateContrainteStockage" eType="#//ContrainteStockage">
+      <eParameters name="c" eType="#//ContrainteStockage"/>
+    </eOperations>
+    <eOperations name="getAllContrainteStockage" upperBound="-1" eType="#//ContrainteStockage"/>
+    <eOperations name="addTypeProduit" eType="#//TypeProduit">
+      <eParameters name="t" eType="#//TypeProduit"/>
+    </eOperations>
+    <eOperations name="removeTypeProduit" eType="#//TypeProduit">
+      <eParameters name="t" eType="#//TypeProduit"/>
+    </eOperations>
+    <eOperations name="updateTypeProduit" eType="#//TypeProduit">
+      <eParameters name="t" eType="#//TypeProduit"/>
+    </eOperations>
+    <eOperations name="getAllTypeProduit" upperBound="-1" eType="#//TypeProduit"/>
+    <eOperations name="addProduit" eType="#//Produit">
+      <eParameters name="p" eType="#//Produit"/>
+    </eOperations>
+    <eOperations name="removeProduit" eType="#//Produit">
+      <eParameters name="p" eType="#//Produit"/>
+    </eOperations>
+    <eOperations name="updateProduit" eType="#//Produit">
+      <eParameters name="p" eType="#//Produit"/>
+    </eOperations>
+    <eOperations name="getAllProduit" upperBound="-1" eType="#//Produit"/>
+    <eOperations name="addContrainteTemperature" eType="#//ContrainteTemperature">
+      <eParameters name="c" eType="#//ContrainteTemperature"/>
+    </eOperations>
+    <eOperations name="removeContrainteTemperature" eType="#//ContrainteTemperature">
+      <eParameters name="c" eType="#//ContrainteTemperature"/>
+    </eOperations>
+    <eOperations name="updateContrainteTemperature" eType="#//ContrainteTemperature">
+      <eParameters name="c" eType="#//ContrainteTemperature"/>
+    </eOperations>
+    <eOperations name="getAllContrainteTemperature" upperBound="-1" eType="#//ContrainteTemperature"/>
+  </eClassifiers>
+</ecore:EPackage>
