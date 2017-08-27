@@ -181,7 +181,6 @@
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="coutStock" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="coutDeStock" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="coutDeplacement" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ModeleEconomiqueProduit">
     <eOperations name="ModeleEconomiqueProduit" eType="#//ModeleEconomiqueProduit"/>
@@ -462,5 +461,10 @@
       <eParameters name="c" eType="#//ContrainteTemperature"/>
     </eOperations>
     <eOperations name="getAllContrainteTemperature" upperBound="-1" eType="#//ContrainteTemperature"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LotProduit">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="produits" upperBound="-1"
+        eType="#//Produit"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="coutDeplacementLot" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
   </eClassifiers>
 </ecore:EPackage>

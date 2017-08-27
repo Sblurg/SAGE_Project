@@ -98,6 +98,7 @@ public class ProjetModeleFactoryImpl extends EFactoryImpl implements ProjetModel
 			case ProjetModelePackage.CONTRAINTE_DIMENSION_DAO: return createContrainteDimensionDAO();
 			case ProjetModelePackage.ABSTRACT_DAO: return createAbstractDAO();
 			case ProjetModelePackage.CONTROLEUR: return createControleur();
+			case ProjetModelePackage.LOT_PRODUIT: return createLotProduit();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -521,6 +522,16 @@ public class ProjetModeleFactoryImpl extends EFactoryImpl implements ProjetModel
 	public Controleur createControleur() {
 		ControleurImpl controleur = new ControleurImpl();
 		return controleur;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LotProduit createLotProduit() {
+		LotProduitImpl lotProduit = new LotProduitImpl();
+		return lotProduit;
 	}
 
 	/**

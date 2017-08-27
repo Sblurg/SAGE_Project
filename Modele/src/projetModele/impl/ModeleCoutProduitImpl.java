@@ -26,7 +26,6 @@ import projetModele.ProjetModelePackage;
  * <ul>
  *   <li>{@link projetModele.impl.ModeleCoutProduitImpl#getCoutStock <em>Cout Stock</em>}</li>
  *   <li>{@link projetModele.impl.ModeleCoutProduitImpl#getCoutDeStock <em>Cout De Stock</em>}</li>
- *   <li>{@link projetModele.impl.ModeleCoutProduitImpl#getCoutDeplacement <em>Cout Deplacement</em>}</li>
  * </ul>
  *
  * @generated
@@ -71,26 +70,6 @@ public class ModeleCoutProduitImpl extends MinimalEObjectImpl.Container implemen
 	 * @ordered
 	 */
 	protected float coutDeStock = COUT_DE_STOCK_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getCoutDeplacement() <em>Cout Deplacement</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCoutDeplacement()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final float COUT_DEPLACEMENT_EDEFAULT = 0.0F;
-
-	/**
-	 * The cached value of the '{@link #getCoutDeplacement() <em>Cout Deplacement</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCoutDeplacement()
-	 * @generated
-	 * @ordered
-	 */
-	protected float coutDeplacement = COUT_DEPLACEMENT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -158,27 +137,6 @@ public class ModeleCoutProduitImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getCoutDeplacement() {
-		return coutDeplacement;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCoutDeplacement(float newCoutDeplacement) {
-		float oldCoutDeplacement = coutDeplacement;
-		coutDeplacement = newCoutDeplacement;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ProjetModelePackage.MODELE_COUT_PRODUIT__COUT_DEPLACEMENT, oldCoutDeplacement, coutDeplacement));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public ModeleCoutProduit ModeleCoutProduit() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -208,8 +166,6 @@ public class ModeleCoutProduitImpl extends MinimalEObjectImpl.Container implemen
 				return getCoutStock();
 			case ProjetModelePackage.MODELE_COUT_PRODUIT__COUT_DE_STOCK:
 				return getCoutDeStock();
-			case ProjetModelePackage.MODELE_COUT_PRODUIT__COUT_DEPLACEMENT:
-				return getCoutDeplacement();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -227,9 +183,6 @@ public class ModeleCoutProduitImpl extends MinimalEObjectImpl.Container implemen
 				return;
 			case ProjetModelePackage.MODELE_COUT_PRODUIT__COUT_DE_STOCK:
 				setCoutDeStock((Float)newValue);
-				return;
-			case ProjetModelePackage.MODELE_COUT_PRODUIT__COUT_DEPLACEMENT:
-				setCoutDeplacement((Float)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -249,9 +202,6 @@ public class ModeleCoutProduitImpl extends MinimalEObjectImpl.Container implemen
 			case ProjetModelePackage.MODELE_COUT_PRODUIT__COUT_DE_STOCK:
 				setCoutDeStock(COUT_DE_STOCK_EDEFAULT);
 				return;
-			case ProjetModelePackage.MODELE_COUT_PRODUIT__COUT_DEPLACEMENT:
-				setCoutDeplacement(COUT_DEPLACEMENT_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -268,8 +218,6 @@ public class ModeleCoutProduitImpl extends MinimalEObjectImpl.Container implemen
 				return coutStock != COUT_STOCK_EDEFAULT;
 			case ProjetModelePackage.MODELE_COUT_PRODUIT__COUT_DE_STOCK:
 				return coutDeStock != COUT_DE_STOCK_EDEFAULT;
-			case ProjetModelePackage.MODELE_COUT_PRODUIT__COUT_DEPLACEMENT:
-				return coutDeplacement != COUT_DEPLACEMENT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -304,8 +252,6 @@ public class ModeleCoutProduitImpl extends MinimalEObjectImpl.Container implemen
 		result.append(coutStock);
 		result.append(", coutDeStock: ");
 		result.append(coutDeStock);
-		result.append(", coutDeplacement: ");
-		result.append(coutDeplacement);
 		result.append(')');
 		return result.toString();
 	}

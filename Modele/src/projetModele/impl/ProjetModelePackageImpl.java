@@ -28,6 +28,7 @@ import projetModele.LimiteHumidite;
 import projetModele.LimiteHumiditeDAO;
 import projetModele.LimiteTemperature;
 import projetModele.LimiteTemperatureDAO;
+import projetModele.LotProduit;
 import projetModele.ModeleCoutProduit;
 import projetModele.ModeleCoutProduitDAO;
 import projetModele.ModeleEconomiqueProduit;
@@ -355,6 +356,13 @@ public class ProjetModelePackageImpl extends EPackageImpl implements ProjetModel
 	 * @generated
 	 */
 	private EClass controleurEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass lotProduitEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -1225,15 +1233,6 @@ public class ProjetModelePackageImpl extends EPackageImpl implements ProjetModel
 	 */
 	public EAttribute getModeleCoutProduit_CoutDeStock() {
 		return (EAttribute)modeleCoutProduitEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getModeleCoutProduit_CoutDeplacement() {
-		return (EAttribute)modeleCoutProduitEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -2447,6 +2446,33 @@ public class ProjetModelePackageImpl extends EPackageImpl implements ProjetModel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getLotProduit() {
+		return lotProduitEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getLotProduit_Produits() {
+		return (EReference)lotProduitEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLotProduit_CoutDeplacementLot() {
+		return (EAttribute)lotProduitEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ProjetModeleFactory getProjetModeleFactory() {
 		return (ProjetModeleFactory)getEFactoryInstance();
 	}
@@ -2578,7 +2604,6 @@ public class ProjetModelePackageImpl extends EPackageImpl implements ProjetModel
 		modeleCoutProduitEClass = createEClass(MODELE_COUT_PRODUIT);
 		createEAttribute(modeleCoutProduitEClass, MODELE_COUT_PRODUIT__COUT_STOCK);
 		createEAttribute(modeleCoutProduitEClass, MODELE_COUT_PRODUIT__COUT_DE_STOCK);
-		createEAttribute(modeleCoutProduitEClass, MODELE_COUT_PRODUIT__COUT_DEPLACEMENT);
 		createEOperation(modeleCoutProduitEClass, MODELE_COUT_PRODUIT___MODELE_COUT_PRODUIT);
 		createEOperation(modeleCoutProduitEClass, MODELE_COUT_PRODUIT___MODELE_COUT_PRODUIT__FLOAT_FLOAT_FLOAT);
 
@@ -2736,6 +2761,10 @@ public class ProjetModelePackageImpl extends EPackageImpl implements ProjetModel
 		createEOperation(controleurEClass, CONTROLEUR___REMOVE_CONTRAINTE_TEMPERATURE__CONTRAINTETEMPERATURE);
 		createEOperation(controleurEClass, CONTROLEUR___UPDATE_CONTRAINTE_TEMPERATURE__CONTRAINTETEMPERATURE);
 		createEOperation(controleurEClass, CONTROLEUR___GET_ALL_CONTRAINTE_TEMPERATURE);
+
+		lotProduitEClass = createEClass(LOT_PRODUIT);
+		createEReference(lotProduitEClass, LOT_PRODUIT__PRODUITS);
+		createEAttribute(lotProduitEClass, LOT_PRODUIT__COUT_DEPLACEMENT_LOT);
 	}
 
 	/**
@@ -2970,7 +2999,6 @@ public class ProjetModelePackageImpl extends EPackageImpl implements ProjetModel
 		initEClass(modeleCoutProduitEClass, ModeleCoutProduit.class, "ModeleCoutProduit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getModeleCoutProduit_CoutStock(), ecorePackage.getEFloat(), "coutStock", null, 0, 1, ModeleCoutProduit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModeleCoutProduit_CoutDeStock(), ecorePackage.getEFloat(), "coutDeStock", null, 0, 1, ModeleCoutProduit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getModeleCoutProduit_CoutDeplacement(), ecorePackage.getEFloat(), "coutDeplacement", null, 0, 1, ModeleCoutProduit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getModeleCoutProduit__ModeleCoutProduit(), this.getModeleCoutProduit(), "ModeleCoutProduit", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -3302,6 +3330,10 @@ public class ProjetModelePackageImpl extends EPackageImpl implements ProjetModel
 		addEParameter(op, this.getContrainteTemperature(), "c", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getControleur__GetAllContrainteTemperature(), this.getContrainteTemperature(), "getAllContrainteTemperature", 0, -1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(lotProduitEClass, LotProduit.class, "LotProduit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getLotProduit_Produits(), this.getProduit(), null, "produits", null, 0, -1, LotProduit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLotProduit_CoutDeplacementLot(), ecorePackage.getEFloat(), "coutDeplacementLot", null, 0, 1, LotProduit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

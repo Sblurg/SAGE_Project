@@ -236,6 +236,10 @@ public class ProjetModeleAdapterFactory extends AdapterFactoryImpl {
 				return createControleurAdapter();
 			}
 			@Override
+			public Adapter caseLotProduit(LotProduit object) {
+				return createLotProduitAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -840,6 +844,20 @@ public class ProjetModeleAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createControleurAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link projetModele.LotProduit <em>Lot Produit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see projetModele.LotProduit
+	 * @generated
+	 */
+	public Adapter createLotProduitAdapter() {
 		return null;
 	}
 

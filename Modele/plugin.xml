@@ -10,7 +10,8 @@
       <!-- @generated projetModele -->
       <package
             uri="http://www.example.org/projetModele"
-            class="projetModele.ProjetModelePackage"/>
+            class="projetModele.ProjetModelePackage"
+            genModel="model/projetModele.genmodel"/>
    </extension>
 
 </plugin>

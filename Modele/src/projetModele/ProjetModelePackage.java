@@ -1293,22 +1293,13 @@ public interface ProjetModelePackage extends EPackage {
 	int MODELE_COUT_PRODUIT__COUT_DE_STOCK = 1;
 
 	/**
-	 * The feature id for the '<em><b>Cout Deplacement</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODELE_COUT_PRODUIT__COUT_DEPLACEMENT = 2;
-
-	/**
 	 * The number of structural features of the '<em>Modele Cout Produit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODELE_COUT_PRODUIT_FEATURE_COUNT = 3;
+	int MODELE_COUT_PRODUIT_FEATURE_COUNT = 2;
 
 	/**
 	 * The operation id for the '<em>Modele Cout Produit</em>' operation.
@@ -3684,6 +3675,53 @@ public interface ProjetModelePackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link projetModele.impl.LotProduitImpl <em>Lot Produit</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetModele.impl.LotProduitImpl
+	 * @see projetModele.impl.ProjetModelePackageImpl#getLotProduit()
+	 * @generated
+	 */
+	int LOT_PRODUIT = 42;
+
+	/**
+	 * The feature id for the '<em><b>Produits</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOT_PRODUIT__PRODUITS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Cout Deplacement Lot</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOT_PRODUIT__COUT_DEPLACEMENT_LOT = 1;
+
+	/**
+	 * The number of structural features of the '<em>Lot Produit</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOT_PRODUIT_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Lot Produit</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOT_PRODUIT_OPERATION_COUNT = 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link projetModele.OperateurEntrepot <em>Operateur Entrepot</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4621,17 +4659,6 @@ public interface ProjetModelePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getModeleCoutProduit_CoutDeStock();
-
-	/**
-	 * Returns the meta object for the attribute '{@link projetModele.ModeleCoutProduit#getCoutDeplacement <em>Cout Deplacement</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Cout Deplacement</em>'.
-	 * @see projetModele.ModeleCoutProduit#getCoutDeplacement()
-	 * @see #getModeleCoutProduit()
-	 * @generated
-	 */
-	EAttribute getModeleCoutProduit_CoutDeplacement();
 
 	/**
 	 * Returns the meta object for the '{@link projetModele.ModeleCoutProduit#ModeleCoutProduit() <em>Modele Cout Produit</em>}' operation.
@@ -5976,6 +6003,38 @@ public interface ProjetModelePackage extends EPackage {
 	EOperation getControleur__GetAllContrainteTemperature();
 
 	/**
+	 * Returns the meta object for class '{@link projetModele.LotProduit <em>Lot Produit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Lot Produit</em>'.
+	 * @see projetModele.LotProduit
+	 * @generated
+	 */
+	EClass getLotProduit();
+
+	/**
+	 * Returns the meta object for the reference list '{@link projetModele.LotProduit#getProduits <em>Produits</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Produits</em>'.
+	 * @see projetModele.LotProduit#getProduits()
+	 * @see #getLotProduit()
+	 * @generated
+	 */
+	EReference getLotProduit_Produits();
+
+	/**
+	 * Returns the meta object for the attribute '{@link projetModele.LotProduit#getCoutDeplacementLot <em>Cout Deplacement Lot</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Cout Deplacement Lot</em>'.
+	 * @see projetModele.LotProduit#getCoutDeplacementLot()
+	 * @see #getLotProduit()
+	 * @generated
+	 */
+	EAttribute getLotProduit_CoutDeplacementLot();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6755,14 +6814,6 @@ public interface ProjetModelePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MODELE_COUT_PRODUIT__COUT_DE_STOCK = eINSTANCE.getModeleCoutProduit_CoutDeStock();
-
-		/**
-		 * The meta object literal for the '<em><b>Cout Deplacement</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MODELE_COUT_PRODUIT__COUT_DEPLACEMENT = eINSTANCE.getModeleCoutProduit_CoutDeplacement();
 
 		/**
 		 * The meta object literal for the '<em><b>Modele Cout Produit</b></em>' operation.
@@ -7881,6 +7932,32 @@ public interface ProjetModelePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation CONTROLEUR___GET_ALL_CONTRAINTE_TEMPERATURE = eINSTANCE.getControleur__GetAllContrainteTemperature();
+
+		/**
+		 * The meta object literal for the '{@link projetModele.impl.LotProduitImpl <em>Lot Produit</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see projetModele.impl.LotProduitImpl
+		 * @see projetModele.impl.ProjetModelePackageImpl#getLotProduit()
+		 * @generated
+		 */
+		EClass LOT_PRODUIT = eINSTANCE.getLotProduit();
+
+		/**
+		 * The meta object literal for the '<em><b>Produits</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LOT_PRODUIT__PRODUITS = eINSTANCE.getLotProduit_Produits();
+
+		/**
+		 * The meta object literal for the '<em><b>Cout Deplacement Lot</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LOT_PRODUIT__COUT_DEPLACEMENT_LOT = eINSTANCE.getLotProduit_CoutDeplacementLot();
 
 	}
 

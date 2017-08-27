@@ -400,6 +400,15 @@ public interface ProjetModeleFactory extends EFactory {
 	Controleur createControleur();
 
 	/**
+	 * Returns a new object of class '<em>Lot Produit</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Lot Produit</em>'.
+	 * @generated
+	 */
+	LotProduit createLotProduit();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
