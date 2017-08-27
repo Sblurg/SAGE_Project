@@ -1046,13 +1046,31 @@ public interface ProjetModelePackage extends EPackage {
 	int PRODUIT__MODELE_COUT = 6;
 
 	/**
+	 * The feature id for the '<em><b>Cout Achat</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUIT__COUT_ACHAT = 7;
+
+	/**
+	 * The feature id for the '<em><b>Cout Vente</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUIT__COUT_VENTE = 8;
+
+	/**
 	 * The number of structural features of the '<em>Produit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUIT_FEATURE_COUNT = 7;
+	int PRODUIT_FEATURE_COUNT = 9;
 
 	/**
 	 * The operation id for the '<em>Produit</em>' operation.
@@ -4454,6 +4472,28 @@ public interface ProjetModelePackage extends EPackage {
 	EReference getProduit_ModeleCout();
 
 	/**
+	 * Returns the meta object for the attribute '{@link projetModele.Produit#getCoutAchat <em>Cout Achat</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Cout Achat</em>'.
+	 * @see projetModele.Produit#getCoutAchat()
+	 * @see #getProduit()
+	 * @generated
+	 */
+	EAttribute getProduit_CoutAchat();
+
+	/**
+	 * Returns the meta object for the attribute '{@link projetModele.Produit#getCoutVente <em>Cout Vente</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Cout Vente</em>'.
+	 * @see projetModele.Produit#getCoutVente()
+	 * @see #getProduit()
+	 * @generated
+	 */
+	EAttribute getProduit_CoutVente();
+
+	/**
 	 * Returns the meta object for the '{@link projetModele.Produit#Produit() <em>Produit</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6644,6 +6684,22 @@ public interface ProjetModelePackage extends EPackage {
 		 * @generated
 		 */
 		EReference PRODUIT__MODELE_COUT = eINSTANCE.getProduit_ModeleCout();
+
+		/**
+		 * The meta object literal for the '<em><b>Cout Achat</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PRODUIT__COUT_ACHAT = eINSTANCE.getProduit_CoutAchat();
+
+		/**
+		 * The meta object literal for the '<em><b>Cout Vente</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PRODUIT__COUT_VENTE = eINSTANCE.getProduit_CoutVente();
 
 		/**
 		 * The meta object literal for the '<em><b>Produit</b></em>' operation.

@@ -42,6 +42,8 @@ import projetModele.TypeProduit;
  *   <li>{@link projetModele.impl.ProduitImpl#getType <em>Type</em>}</li>
  *   <li>{@link projetModele.impl.ProduitImpl#getContrainteStockage <em>Contrainte Stockage</em>}</li>
  *   <li>{@link projetModele.impl.ProduitImpl#getModeleCout <em>Modele Cout</em>}</li>
+ *   <li>{@link projetModele.impl.ProduitImpl#getCoutAchat <em>Cout Achat</em>}</li>
+ *   <li>{@link projetModele.impl.ProduitImpl#getCoutVente <em>Cout Vente</em>}</li>
  * </ul>
  *
  * @generated
@@ -136,6 +138,46 @@ public class ProduitImpl extends MinimalEObjectImpl.Container implements Produit
 	 * @ordered
 	 */
 	protected ModeleCoutProduit modeleCout;
+
+	/**
+	 * The default value of the '{@link #getCoutAchat() <em>Cout Achat</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCoutAchat()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final float COUT_ACHAT_EDEFAULT = 0.0F;
+
+	/**
+	 * The cached value of the '{@link #getCoutAchat() <em>Cout Achat</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCoutAchat()
+	 * @generated
+	 * @ordered
+	 */
+	protected float coutAchat = COUT_ACHAT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCoutVente() <em>Cout Vente</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCoutVente()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final float COUT_VENTE_EDEFAULT = 0.0F;
+
+	/**
+	 * The cached value of the '{@link #getCoutVente() <em>Cout Vente</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCoutVente()
+	 * @generated
+	 * @ordered
+	 */
+	protected float coutVente = COUT_VENTE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -367,6 +409,48 @@ public class ProduitImpl extends MinimalEObjectImpl.Container implements Produit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public float getCoutAchat() {
+		return coutAchat;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCoutAchat(float newCoutAchat) {
+		float oldCoutAchat = coutAchat;
+		coutAchat = newCoutAchat;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ProjetModelePackage.PRODUIT__COUT_ACHAT, oldCoutAchat, coutAchat));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public float getCoutVente() {
+		return coutVente;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCoutVente(float newCoutVente) {
+		float oldCoutVente = coutVente;
+		coutVente = newCoutVente;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ProjetModelePackage.PRODUIT__COUT_VENTE, oldCoutVente, coutVente));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Produit Produit() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -410,6 +494,10 @@ public class ProduitImpl extends MinimalEObjectImpl.Container implements Produit
 			case ProjetModelePackage.PRODUIT__MODELE_COUT:
 				if (resolve) return getModeleCout();
 				return basicGetModeleCout();
+			case ProjetModelePackage.PRODUIT__COUT_ACHAT:
+				return getCoutAchat();
+			case ProjetModelePackage.PRODUIT__COUT_VENTE:
+				return getCoutVente();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -445,6 +533,12 @@ public class ProduitImpl extends MinimalEObjectImpl.Container implements Produit
 			case ProjetModelePackage.PRODUIT__MODELE_COUT:
 				setModeleCout((ModeleCoutProduit)newValue);
 				return;
+			case ProjetModelePackage.PRODUIT__COUT_ACHAT:
+				setCoutAchat((Float)newValue);
+				return;
+			case ProjetModelePackage.PRODUIT__COUT_VENTE:
+				setCoutVente((Float)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -478,6 +572,12 @@ public class ProduitImpl extends MinimalEObjectImpl.Container implements Produit
 			case ProjetModelePackage.PRODUIT__MODELE_COUT:
 				setModeleCout((ModeleCoutProduit)null);
 				return;
+			case ProjetModelePackage.PRODUIT__COUT_ACHAT:
+				setCoutAchat(COUT_ACHAT_EDEFAULT);
+				return;
+			case ProjetModelePackage.PRODUIT__COUT_VENTE:
+				setCoutVente(COUT_VENTE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -504,6 +604,10 @@ public class ProduitImpl extends MinimalEObjectImpl.Container implements Produit
 				return contrainteStockage != null && !contrainteStockage.isEmpty();
 			case ProjetModelePackage.PRODUIT__MODELE_COUT:
 				return modeleCout != null;
+			case ProjetModelePackage.PRODUIT__COUT_ACHAT:
+				return coutAchat != COUT_ACHAT_EDEFAULT;
+			case ProjetModelePackage.PRODUIT__COUT_VENTE:
+				return coutVente != COUT_VENTE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -538,6 +642,10 @@ public class ProduitImpl extends MinimalEObjectImpl.Container implements Produit
 		result.append(name);
 		result.append(", dateLimiteConso: ");
 		result.append(dateLimiteConso);
+		result.append(", coutAchat: ");
+		result.append(coutAchat);
+		result.append(", coutVente: ");
+		result.append(coutVente);
 		result.append(')');
 		return result.toString();
 	}

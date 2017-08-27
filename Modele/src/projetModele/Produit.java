@@ -24,6 +24,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link projetModele.Produit#getType <em>Type</em>}</li>
  *   <li>{@link projetModele.Produit#getContrainteStockage <em>Contrainte Stockage</em>}</li>
  *   <li>{@link projetModele.Produit#getModeleCout <em>Modele Cout</em>}</li>
+ *   <li>{@link projetModele.Produit#getCoutAchat <em>Cout Achat</em>}</li>
+ *   <li>{@link projetModele.Produit#getCoutVente <em>Cout Vente</em>}</li>
  * </ul>
  *
  * @see projetModele.ProjetModelePackage#getProduit()
@@ -202,6 +204,58 @@ public interface Produit extends EObject {
 	 * @generated
 	 */
 	void setModeleCout(ModeleCoutProduit value);
+
+	/**
+	 * Returns the value of the '<em><b>Cout Achat</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Cout Achat</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Cout Achat</em>' attribute.
+	 * @see #setCoutAchat(float)
+	 * @see projetModele.ProjetModelePackage#getProduit_CoutAchat()
+	 * @model
+	 * @generated
+	 */
+	float getCoutAchat();
+
+	/**
+	 * Sets the value of the '{@link projetModele.Produit#getCoutAchat <em>Cout Achat</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Cout Achat</em>' attribute.
+	 * @see #getCoutAchat()
+	 * @generated
+	 */
+	void setCoutAchat(float value);
+
+	/**
+	 * Returns the value of the '<em><b>Cout Vente</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Cout Vente</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Cout Vente</em>' attribute.
+	 * @see #setCoutVente(float)
+	 * @see projetModele.ProjetModelePackage#getProduit_CoutVente()
+	 * @model
+	 * @generated
+	 */
+	float getCoutVente();
+
+	/**
+	 * Sets the value of the '{@link projetModele.Produit#getCoutVente <em>Cout Vente</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Cout Vente</em>' attribute.
+	 * @see #getCoutVente()
+	 * @generated
+	 */
+	void setCoutVente(float value);
 
 	/**
 	 * <!-- begin-user-doc -->

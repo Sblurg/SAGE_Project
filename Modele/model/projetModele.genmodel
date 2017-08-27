@@ -122,6 +122,8 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetModele.ecore#//Produit/type"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetModele.ecore#//Produit/contrainteStockage"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetModele.ecore#//Produit/modeleCout"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetModele.ecore#//Produit/coutAchat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetModele.ecore#//Produit/coutVente"/>
       <genOperations ecoreOperation="projetModele.ecore#//Produit/Produit"/>
       <genOperations ecoreOperation="projetModele.ecore#//Produit/Produit.1">
         <genParameters ecoreParameter="projetModele.ecore#//Produit/Produit.1/name"/>

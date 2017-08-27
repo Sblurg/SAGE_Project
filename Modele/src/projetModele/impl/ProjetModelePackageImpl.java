@@ -1060,6 +1060,24 @@ public class ProjetModelePackageImpl extends EPackageImpl implements ProjetModel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getProduit_CoutAchat() {
+		return (EAttribute)produitEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getProduit_CoutVente() {
+		return (EAttribute)produitEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getProduit__Produit() {
 		return produitEClass.getEOperations().get(0);
 	}
@@ -2579,6 +2597,8 @@ public class ProjetModelePackageImpl extends EPackageImpl implements ProjetModel
 		createEReference(produitEClass, PRODUIT__TYPE);
 		createEReference(produitEClass, PRODUIT__CONTRAINTE_STOCKAGE);
 		createEReference(produitEClass, PRODUIT__MODELE_COUT);
+		createEAttribute(produitEClass, PRODUIT__COUT_ACHAT);
+		createEAttribute(produitEClass, PRODUIT__COUT_VENTE);
 		createEOperation(produitEClass, PRODUIT___PRODUIT);
 		createEOperation(produitEClass, PRODUIT___PRODUIT__STRING_FLOAT_FLOAT_DATE_TYPEPRODUIT_POSITION_DIMENSION_CONTRAINTESTOCKAGE);
 
@@ -2953,6 +2973,8 @@ public class ProjetModelePackageImpl extends EPackageImpl implements ProjetModel
 		initEReference(getProduit_Type(), this.getTypeProduit(), null, "type", null, 1, 1, Produit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProduit_ContrainteStockage(), this.getContrainteStockage(), null, "contrainteStockage", null, 0, -1, Produit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProduit_ModeleCout(), this.getModeleCoutProduit(), null, "modeleCout", null, 1, 1, Produit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProduit_CoutAchat(), ecorePackage.getEFloat(), "coutAchat", null, 0, 1, Produit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProduit_CoutVente(), ecorePackage.getEFloat(), "coutVente", null, 0, 1, Produit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getProduit__Produit(), this.getProduit(), "Produit", 0, 1, IS_UNIQUE, IS_ORDERED);
 

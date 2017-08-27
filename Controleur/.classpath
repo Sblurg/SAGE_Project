@@ -44,5 +44,6 @@
 			<accessrule ignoreifbetter="true" kind="nonaccessible" pattern="**/*"/>
 		</accessrules>
 	</classpathentry>
+	<classpathentry kind="src" path="/ProjetModele"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
