@@ -6,6 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.math3.distribution.NormalDistribution;
 import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 
 import produitsModeliser.LotCarotte;
@@ -103,5 +104,30 @@ public class Calculs {
 						", Ecart Type : " + lStatPatate.getStandardDeviation());
 			}
 		}
+	}
+	
+	public double calculProbabilite(double x, StatistiqueProduitMois s) {
+		double ret = 0.0;
+		
+		NormalDistribution lNorm = new NormalDistribution(s.getmMoyenne(), s.getmEcart());
+		ret = 1 - lNorm.cumulativeProbability(x - 1);
+		
+		return ret;
+	}
+
+	public static List<StatistiqueProduitMois> getmListStatPatate() {
+		return mListStatPatate;
+	}
+
+	public static void setmListStatPatate(List<StatistiqueProduitMois> mListStatPatate) {
+		Calculs.mListStatPatate = mListStatPatate;
+	}
+
+	public static List<StatistiqueProduitMois> getmListStatCarotte() {
+		return mListStatCarotte;
+	}
+
+	public static void setmListStatCarotte(List<StatistiqueProduitMois> mListStatCarotte) {
+		Calculs.mListStatCarotte = mListStatCarotte;
 	}
 }
